@@ -112,8 +112,17 @@ form #datepicker {
   padding: 2em;
   max-width: 100%;
   margin: auto; }
+.wrapper #alert {
+  background-color: #f24122;
+  margin-top: -2em; }
+  .wrapper #alert p {
+    padding: 1em;
+    color: #fff;
+    font-weight: 100;
+    text-align: center; }
 .wrapper .weekWeather {
   background-color: #007e7a;
+  margin-top: -1em;
   padding: 2em; }
 
 /*# sourceMappingURL=style.css.map */

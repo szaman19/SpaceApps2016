@@ -13,6 +13,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 
+
     <script>
         $(document).ready(function() {
             $("#datepicker").datepicker();
@@ -57,15 +58,22 @@
     </div>
     <div id="container-two">
         <div id="searchHeader">
-          <div id="back"><button><-</button></div>
+            <div id="back">
+                <button><-</button>
+            </div>
             <div id="dateInfo">Jan. 3rd, 2016</div>
             <div id="location">New York, NY</div>
         </div>
         <div class="wrapper">
-          <img src="https://www.almanac.com/sites/default/files/d6/us_weathermaps13-summer-cmyk.jpg" alt="add interactive map" />
-          <div class="weekWeather">
-            <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=42.3583&lon=-71.0603&name=Downtown Boston"> </iframe>
-          </div>
+            <img src="https://www.almanac.com/sites/default/files/d6/us_weathermaps13-summer-cmyk.jpg" alt="add interactive map"/>
+            <div id="alert">
+                <p>
+                    Wildfires in Manhattan
+                </p>
+            </div>
+            <div class="weekWeather">
+                <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=42.3583&lon=-71.0603&name=Downtown Boston"></iframe>
+            </div>
         </div>
     </div>
 

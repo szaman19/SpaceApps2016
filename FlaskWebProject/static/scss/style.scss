@@ -135,8 +135,19 @@ form {
     max-width: 100%;
     margin: auto;
   }
+  #alert {
+    background-color:#f24122;
+    margin-top:-2em;
+    p{
+      padding:1em;
+      color:#fff;
+      font-weight:100;
+      text-align:center;
+    }
+  }
   .weekWeather {
     background-color: $search;
+    margin-top:-1em;
     padding:2em;
   }
 }
