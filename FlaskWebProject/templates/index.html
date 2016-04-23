@@ -11,51 +11,48 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+
     <script>
         $(document).ready(function() {
             $("#datepicker").datepicker();
+            $("#submit").click(function() {
+                $("#container").toggle();
+                $("#container-two").toggle();
 
-            $('form > input').keyup(function() { <<<<<<< HEAD
-                var empty = false;
-                $('form > input').each(function() {
-                    if ($(this).val() == '') {
-                        empty = true;
-                    }
-                });
-
-                if (empty) {
-                    $('#register').attr('disabled', 'disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
-                } else {
-                    $('#register').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
-                }
             });
         });
     </script>
 </head>
 
 <body>
+    <div id="container">
+        <div id="logo">
+            <object type="image/svg+xml" data="/static/img/checkfly.svg" class="logo">
+                <img src="/static/img/checkfly.svg" alt="FlightCheck Logo"/>
+            </object>
+        </div>
+        <div id="search">
+            <form id="searching">
+                <div class="title">
+                    <div id="from">From:</div>
+                    <div id="to">To:</div>
+                </div>
 
-    <div id="logo">
-        <object type="image/svg+xml" data="/static/img/checkfly.svg" class="logo">
-            <img src="/static/img/checkfly.svg" alt="FlightCheck Logo"/>
-        </object>
+                <input type="text" name="from" placeholder="enter city">
+                <input type="text" name="to" placeholder="enter city">
+                <div class="title">
+                    <div id="date">Date:</div>
+                </div>
+                <input id="datepicker" name="data" placeholder="choose date"/>
+                <input type="button" id="submit" value="Search"/>
+            </form>
+
+        </div>
     </div>
-<div id="search">
-    <form id="searching">
-        <div class="title">
-            <div id="from">From:</div>
-            <div id="to">To:</div>
-        </div>
-
-        <input type="text" name="from" placeholder="enter city">
-        <input type="text" name="to" placeholder="enter city">
-        <div class="title">
-            <div id="date">Date:</div>
-        </div>
-        <input id="datepicker" name="data" placeholder="choose date"/>
-        <input type="submit" id="submit" value="Search" disabled="disabled"/>
-    </form>
-</div>
+    <div id="container-two">
+      asdfs
+    </div>
 
 </body>
 
