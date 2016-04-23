@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <title>CheckFly</title>
-        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/normalize.css">
+<meta charset="UTF-8">
+<title>CheckFly</title>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/normalize.css">
 
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -18,6 +17,7 @@
 
                 $('form > input').keyup(function() {
 
+<<<<<<< HEAD
     var empty = false;
     $('form > input').each(function() {
         if ($(this).val() == '') {
@@ -43,6 +43,17 @@
             <object type="image/svg+xml" data="img/checkfly.svg" class="logo">
                 <img src="img/checkfly.svg" alt="FlightCheck Logo"/>
             </object>
+=======
+    <div id="logo">
+        <object type="image/svg+xml" data="/static/img/checkfly.svg" class="logo">
+            <img src="/static/img/checkfly.svg" alt="FlightCheck Logo" />
+        </object>
+    </div>
+    <div id="search">
+        <div class="title">
+            <div id="city">City:</div>
+            <div id="date">Date:</div>
+>>>>>>> master
         </div>
         <div id="search">
             <form id="searching">
