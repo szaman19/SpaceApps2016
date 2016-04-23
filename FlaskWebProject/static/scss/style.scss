@@ -4,20 +4,20 @@ $search: #007e7a;
     box-sizing: border-box;
 }
 body {
-    background-color: $search;
     font-family: 'Montserrat', sans-serif;
+}
+#container {
+    display: none;
+    background-color: $search;
 }
 #logo {
     width: 100%;
-    padding: 2em;
+    padding: 3em 2em 4em 2em;
     background-color: $sky;
 }
-
-#container-two {
-  display:none;
-}
-
 #search {
+  position:relative;
+  bottom:0;
     padding: 2em;
     background-color: $search;
 }
@@ -77,8 +77,9 @@ form {
         font-weight: bold;
         text-decoration: none;
         border: none;
-        &:hover,&:active{
-          background-color: #ffbb22;
+        &:active,
+        &:hover {
+            background-color: #ffbb22;
         }
     }
     #datepicker {
@@ -105,4 +106,37 @@ form {
             color: #a6a6a6;
         }
     }
+}
+//////////////////////////////////
+#container-two {
+    // display:none;
+    background-color: $sky;
+}
+#searchHeader {
+  padding:2em;
+  background-color:#fff;
+  #dateInfo {
+      display: table;
+      margin:auto;
+      font-size:1.2em;
+      color: #206aa7;
+  }
+  #location {
+    color: #000;
+      display: table;
+      margin:auto;
+      font-size: 1.8em;
+  }
+}
+
+.wrapper {
+  img {
+    padding: 2em;
+    max-width: 100%;
+    margin: auto;
+  }
+  .weekWeather {
+    background-color: $search;
+    padding:2em;
+  }
 }

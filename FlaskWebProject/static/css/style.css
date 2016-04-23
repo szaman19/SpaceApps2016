@@ -2,18 +2,20 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #007e7a;
   font-family: 'Montserrat', sans-serif; }
+
+#container {
+  display: none;
+  background-color: #007e7a; }
 
 #logo {
   width: 100%;
-  padding: 2em;
+  padding: 3em 2em 4em 2em;
   background-color: #5fc4bc; }
 
-#container-two {
-  display: none; }
-
 #search {
+  position: relative;
+  bottom: 0;
   padding: 2em;
   background-color: #007e7a; }
 
@@ -67,7 +69,7 @@ form input[type="button"] {
   font-weight: bold;
   text-decoration: none;
   border: none; }
-  form input[type="button"]:hover, form input[type="button"]:active {
+  form input[type="button"]:active, form input[type="button"]:hover {
     background-color: #ffbb22; }
 form #datepicker {
   background-color: #fff;
@@ -88,5 +90,30 @@ form #datepicker {
     color: #a6a6a6; }
   form #datepicker::-ms-input-placeholder {
     color: #a6a6a6; }
+
+#container-two {
+  background-color: #5fc4bc; }
+
+#searchHeader {
+  padding: 2em;
+  background-color: #fff; }
+  #searchHeader #dateInfo {
+    display: table;
+    margin: auto;
+    font-size: 1.2em;
+    color: #206aa7; }
+  #searchHeader #location {
+    color: #000;
+    display: table;
+    margin: auto;
+    font-size: 1.8em; }
+
+.wrapper img {
+  padding: 2em;
+  max-width: 100%;
+  margin: auto; }
+.wrapper .weekWeather {
+  background-color: #007e7a;
+  padding: 2em; }
 
 /*# sourceMappingURL=style.css.map */
