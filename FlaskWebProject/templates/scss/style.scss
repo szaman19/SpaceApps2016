@@ -23,9 +23,13 @@ body {
     color: #fff;
     font-size:1.3em;
 }
-#city {
+#from {
     display: inline-table;
-    width: 55%;
+    width: 50%;
+}
+#to {
+    display: inline-table;
+    width: 50%;
 }
 #date {
     display: inline-table;
@@ -35,10 +39,10 @@ body {
 form {
     input[type="text"] {
         background-color: #fff;
-        width: 50%;
-        margin-right: 1em;
+        width: 49%;
         padding: 0.5em;
-        font-size: 1em;
+        margin-bottom:2em;
+        font-size: 0.95em;
         color: #000;
         font-weight: bold;
         text-decoration: none;
@@ -61,7 +65,7 @@ form {
     #datepicker {
         background-color: #fff;
         padding: 0.5em;
-        font-size: 1em;
+        font-size: 0.95em;
         color: #000;
         font-weight: bold;
         text-decoration: none;
