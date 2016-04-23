@@ -2,6 +2,7 @@
 <html lang="en">
 
     <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>CheckFly</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/static/css/style.css">
@@ -12,8 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-
-
+    <script src="/static/autocomplete/teleport-autocomplete.js"></script>
     <script>
         $(document).ready(function() {
             $("#datepicker").datepicker();
@@ -27,6 +27,16 @@
                 $("#container-two").toggle();
 
             });
+
+
+            var $results = document.querySelector('.results');
+            var appendToResult = $results.insertAdjacentHTML.bind($results, 'afterend');
+
+            TeleportAutocomplete.init('.from').on('change', function(value) {
+              appendToResult('<pre>' + JSON.stringify(value, null, 2) + '</pre>');
+
+            });
+
         });
     </script>
 </head>
@@ -45,7 +55,7 @@
                     <div id="to">To:</div>
                 </div>
 
-                <input type="text" name="from" placeholder="enter city">
+                <input class="from" type="text" name="field" tabindex="1" autocomplete="off" placeholder="enter city">
                 <input type="text" name="to" placeholder="enter city">
                 <div class="title">
                     <div id="date">Date:</div>
@@ -53,6 +63,7 @@
                 <input id="datepicker" name="data" placeholder="choose date"/>
                 <input type="button" id="submit" value="Search"/>
             </form>
+            <div class="results"></div>
 
         </div>
     </div>
@@ -76,6 +87,7 @@
             </div>
         </div>
     </div>
+
 
 </body>
 
