@@ -10,6 +10,9 @@ body {
   padding: 2em;
   background-color: #5fc4bc; }
 
+#container-two {
+  display: none; }
+
 #search {
   padding: 2em;
   background-color: #007e7a; }
@@ -21,53 +24,69 @@ body {
   color: #fff;
   font-size: 1.3em; }
 
-#city {
+#from {
   display: inline-table;
-  width: 55%; }
+  width: 50%; }
+
+#to {
+  display: inline-table;
+  width: 50%; }
 
 #date {
   display: inline-table;
-  width: 35%;
+  width: 100%;
   text-align: left; }
 
 form input[type="text"] {
   background-color: #fff;
-  width: 50%;
-  margin-right: 1em;
+  width: 49%;
   padding: 0.5em;
-  font-size: 1em;
+  margin-bottom: 2em;
+  font-size: 0.95em;
   color: #000;
   font-weight: bold;
   text-decoration: none;
   border: none; }
-form input[type="text"]::-webkit-input-placeholder {
-  color: #a6a6a6; }
-form input[type="text"]:-moz-placeholder {
-  /* Firefox 18- */
-  color: #a6a6a6; }
-form input[type="text"]::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #a6a6a6; }
-form input[type="text"]::-ms-input-placeholder {
-  color: #a6a6a6; }
+  form input[type="text"]::-webkit-input-placeholder {
+    color: #a6a6a6; }
+  form input[type="text"]:-moz-placeholder {
+    /* Firefox 18- */
+    color: #a6a6a6; }
+  form input[type="text"]::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #a6a6a6; }
+  form input[type="text"]::-ms-input-placeholder {
+    color: #a6a6a6; }
+form input[type="button"] {
+  background-color: #ffdc22;
+  width: 49%;
+  padding: 0.5em;
+  margin-bottom: 2em;
+  font-size: 0.95em;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border: none; }
+  form input[type="button"]:hover, form input[type="button"]:active {
+    background-color: #ffbb22; }
 form #datepicker {
   background-color: #fff;
   padding: 0.5em;
-  font-size: 1em;
+  font-size: 0.95em;
   color: #000;
   font-weight: bold;
   text-decoration: none;
   border: none;
-  width: 40%; }
-form #datepicker::-webkit-input-placeholder {
-  color: #a6a6a6; }
-form #datepicker:-moz-placeholder {
-  /* Firefox 18- */
-  color: #a6a6a6; }
-form #datepicker::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #a6a6a6; }
-form #datepicker::-ms-input-placeholder {
-  color: #a6a6a6; }
+  width: 49%; }
+  form #datepicker::-webkit-input-placeholder {
+    color: #a6a6a6; }
+  form #datepicker:-moz-placeholder {
+    /* Firefox 18- */
+    color: #a6a6a6; }
+  form #datepicker::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #a6a6a6; }
+  form #datepicker::-ms-input-placeholder {
+    color: #a6a6a6; }
 
 /*# sourceMappingURL=style.css.map */

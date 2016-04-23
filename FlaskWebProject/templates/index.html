@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
     <meta charset="UTF-8">
     <title>CheckFly</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
@@ -9,61 +8,50 @@
     <link rel="stylesheet" href="/static/css/normalize.css">
 
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
-  <script>
-  $(document).ready(function() {
-    $("#datepicker").datepicker();
-  });
-  </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#datepicker").datepicker();
+            $("#submit").click(function() {
+                $("#container").toggle();
+                $("#container-two").toggle();
+
+            });
+        });
+    </script>
 </head>
 
 <body>
-
-    <div id="logo">
-        <object type="image/svg+xml" data="/static/img/checkfly.svg" class="logo">
-            <img src="/static/img/checkfly.svg" alt="FlightCheck Logo" />
-        </object>
-    </div>
-    <div id="search">
-        <div class="title">
-            <div id="city">City:</div>
-            <div id="date">Date:</div>
+    <div id="container">
+        <div id="logo">
+            <object type="image/svg+xml" data="/static/img/checkfly.svg" class="logo">
+                <img src="/static/img/checkfly.svg" alt="FlightCheck Logo"/>
+            </object>
         </div>
-        <form>
-            <input type="text" name="city" placeholder="enter city to search">
-             <input id="datepicker" placeholder="choose date"/>
-            <!-- <select name="month">
-                <option value="jan">January</option>
-                <option value="feb">February</option>
-                <option value="mar">March</option>
-                <option value="apr">April</option>
-                <option value="may">May</option>
-                <option value="jun">June</option>
-                <option value="jul">July</option>
-                <option value="aug">August</option>
-                <option value="sep">September</option>
-                <option value="oct">October</option>
-                <option value="nov">November</option>
-                <option value="dec">December</option>
-            </select>
-            <select name="day">
-                <option value="jan">January</option>
-                <option value="feb">February</option>
-                <option value="mar">March</option>
-                <option value="apr">April</option>
-                <option value="may">May</option>
-                <option value="jun">June</option>
-                <option value="jul">July</option>
-                <option value="aug">August</option>
-                <option value="sep">September</option>
-                <option value="oct">October</option>
-                <option value="nov">November</option>
-                <option value="dec">December</option>
-            </select> -->
+        <div id="search">
+            <form id="searching">
+                <div class="title">
+                    <div id="from">From:</div>
+                    <div id="to">To:</div>
+                </div>
 
-        </form>
+                <input type="text" name="from" placeholder="enter city">
+                <input type="text" name="to" placeholder="enter city">
+                <div class="title">
+                    <div id="date">Date:</div>
+                </div>
+                <input id="datepicker" name="data" placeholder="choose date"/>
+                <input type="button" id="submit" value="Search"/>
+            </form>
+
+        </div>
+    </div>
+    <div id="container-two">
+      asdfs
     </div>
 
 </body>
