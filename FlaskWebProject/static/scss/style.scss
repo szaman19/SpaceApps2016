@@ -7,7 +7,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 #container {
-    display: none;
+    // display: none;
     background-color: $search;
 }
 #logo {
@@ -52,6 +52,7 @@ form {
         font-weight: bold;
         text-decoration: none;
         border: none;
+        
         &::-webkit-input-placeholder {
             color: #a6a6a6;
         }
@@ -109,7 +110,7 @@ form {
 }
 //////////////////////////////////
 #container-two {
-    // display:none;
+    display:none;
     background-color: $sky;
 }
 #searchHeader {
