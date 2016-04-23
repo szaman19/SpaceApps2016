@@ -1,0 +1,85 @@
+$sky: #5fc4bc;
+$search: #007e7a;
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: $search;
+    font-family: 'Montserrat', sans-serif;
+}
+#logo {
+    width: 100%;
+    padding: 2em;
+        background-color: $sky;
+}
+#search {
+    padding: 2em;
+    background-color: $search;
+}
+.title {
+    display: table;
+    width: 100%;
+    margin-bottom: 0.5em;
+    color: #fff;
+    font-size:1.3em;
+}
+#city {
+    display: inline-table;
+    width: 55%;
+}
+#date {
+    display: inline-table;
+    width: 35%;
+    text-align: left;
+}
+form {
+    input[type="text"] {
+        background-color: #fff;
+        width: 50%;
+        margin-right: 1em;
+        padding: 0.5em;
+        font-size: 1em;
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+        border: none;
+    }
+    input[type="text"]::-webkit-input-placeholder {
+        color: #a6a6a6;
+    }
+    input[type="text"]:-moz-placeholder {
+        /* Firefox 18- */
+        color: #a6a6a6;
+    }
+    input[type="text"]::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #a6a6a6;
+    }
+    input[type="text"]::-ms-input-placeholder {
+        color: #a6a6a6;
+    }
+    #datepicker {
+        background-color: #fff;
+        padding: 0.5em;
+        font-size: 1em;
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+        border: none;
+        width: 40%;
+    }
+    #datepicker::-webkit-input-placeholder {
+        color: #a6a6a6;
+    }
+    #datepicker:-moz-placeholder {
+        /* Firefox 18- */
+        color: #a6a6a6;
+    }
+    #datepicker::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #a6a6a6;
+    }
+    #datepicker::-ms-input-placeholder {
+        color: #a6a6a6;
+    }
+}
