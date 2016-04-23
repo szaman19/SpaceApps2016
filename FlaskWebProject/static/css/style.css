@@ -5,7 +5,6 @@ body {
   font-family: 'Montserrat', sans-serif; }
 
 #container {
-  display: none;
   background-color: #007e7a; }
 
 #logo {
@@ -92,6 +91,7 @@ form #datepicker {
     color: #a6a6a6; }
 
 #container-two {
+  display: none;
   background-color: #5fc4bc; }
 
 #searchHeader {

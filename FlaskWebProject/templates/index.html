@@ -2,7 +2,7 @@
 <html lang="en">
 
     <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>CheckFly</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/static/css/style.css">
@@ -28,12 +28,15 @@
 
             });
 
-
             var $results = document.querySelector('.results');
             var appendToResult = $results.insertAdjacentHTML.bind($results, 'afterend');
 
             TeleportAutocomplete.init('.from').on('change', function(value) {
-              appendToResult('<pre>' + JSON.stringify(value, null, 2) + '</pre>');
+                appendToResult('<pre>' + JSON.stringify(value, null, 2) + '</pre>');
+
+            });
+            TeleportAutocomplete.init('.to').on('change', function(value) {
+                appendToResult('<pre>' + JSON.stringify(value, null, 2) + '</pre>');
 
             });
 
@@ -52,11 +55,13 @@
             <form id="searching">
                 <div class="title">
                     <div id="from">From:</div>
-                    <div id="to">To:</div>
                 </div>
 
-                <input class="from" type="text" name="field" tabindex="1" autocomplete="off" placeholder="enter city">
-                <input type="text" name="to" placeholder="enter city">
+                <input type="text" class="from" name="from" autocomplete="off" placeholder="enter city">
+                <div class="title">
+                    <div id="to">To:</div>
+                </div>
+                <input type="text" class="to" name="to" autocomplete="off" placeholder="enter city">
                 <div class="title">
                     <div id="date">Date:</div>
                 </div>
@@ -87,7 +92,6 @@
             </div>
         </div>
     </div>
-
 
 </body>
 
