@@ -30,13 +30,30 @@
 
             var $results = document.querySelector('.results');
             var appendToResult = $results.insertAdjacentHTML.bind($results, 'afterend');
+            var city;
+            var fromLat;
+            var fromLon;
+            var toLat;
+            var toLon;
 
             TeleportAutocomplete.init('.from').on('change', function(value) {
-                appendToResult('<pre>' + JSON.stringify(value, null, 2) + '</pre>');
+                // appendToResult('<pre>' + JSON.stringify(value, null, 2) + '</pre>');
+                fromLat = JSON.stringify(value["latitude"]);
+                fromLon = JSON.stringify(value["longitude"]);
+                city = JSON.stringify(value["name"]);
+                console.log(city);
+                console.log("latitude: " + fromLat);
+                console.log("longitude: " + fromLon);
 
             });
             TeleportAutocomplete.init('.to').on('change', function(value) {
-                appendToResult('<pre>' + JSON.stringify(value, null, 2) + '</pre>');
+                // appendToResult('<pre>' + JSON.stringify(value, null, 2) + '</pre>');
+                fromLat = JSON.stringify(value["latitude"]);
+                fromLon = JSON.stringify(value["longitude"]);
+                city = JSON.stringify(value["name"]);
+                console.log(city);
+                console.log("latitude: " + fromLat);
+                console.log("longitude: " + fromLon);
 
             });
 
