@@ -3,7 +3,7 @@ Routes and views for the flask application.
 """
 
 from datetime import datetime
-from flask import render_template
+from flask import render_template, jsonify, request
 from FlaskWebProject import app
 
 @app.route('/')
@@ -15,12 +15,16 @@ def home():
         title='Home Page',
         year=datetime.now().year,
     )
-    
-    
-@app.route('/awesome')
+
+
+@app.route('/apiTest')
 def awesome():
     """Renders awesome"""
     return render_template(
-        'awesome.html',
+        'apiTest.html',
         title='AWESOME',
     )
+
+@app.route('/trial', methods=['GET'])
+def apiTrial():
+    return jsonify({"Hello":"World"});
