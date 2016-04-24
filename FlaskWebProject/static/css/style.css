@@ -9,18 +9,28 @@ body {
 
 #logo {
   width: 100%;
-  padding: 3em 2em 4em 2em;
-  background-color: #5fc4bc; }
+  margin: auto;
+  background-color: #5fc4bc;
+  text-align: center; }
+  #logo object {
+    width: 90%;
+    margin: 0.3em auto 0.3em auto; }
 
 #search {
   position: relative;
   bottom: 0;
-  padding: 2em;
   background-color: #007e7a; }
 
+.half {
+  width: 40%;
+  display: inline-table;
+  vertical-align: top; }
+
+.row {
+  padding: 2em 2em 0 2em;
+  margin-bottom: -2em; }
+
 .title {
-  display: table;
-  width: 100%;
   margin-bottom: 0.5em;
   color: #fff;
   font-size: 1.3em; }
@@ -35,12 +45,11 @@ body {
 
 #date {
   display: inline-table;
-  width: 100%;
+  width: 50%;
   text-align: left; }
 
 form input[type="text"] {
   background-color: #fff;
-  width: 49%;
   padding: 0.5em;
   margin-bottom: 2em;
   font-size: 0.95em;
@@ -60,10 +69,11 @@ form input[type="text"] {
     color: #a6a6a6; }
 form input[type="button"] {
   background-color: #ffdc22;
-  width: 49%;
-  padding: 0.5em;
-  margin-bottom: 2em;
-  font-size: 0.95em;
+  width: 100%;
+  padding: 1em;
+  margin-top: 4em;
+  font-size: 1.2em;
+  text-transform: uppercase;
   color: #000;
   font-weight: bold;
   text-decoration: none;
@@ -77,8 +87,7 @@ form #datepicker {
   color: #000;
   font-weight: bold;
   text-decoration: none;
-  border: none;
-  width: 49%; }
+  border: none; }
   form #datepicker::-webkit-input-placeholder {
     color: #a6a6a6; }
   form #datepicker:-moz-placeholder {

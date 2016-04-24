@@ -70,19 +70,25 @@
         </div>
         <div id="search">
             <form id="searching">
-                <div class="title">
-                    <div id="from">From:</div>
+                <div class="row">
+                    <div class="half">
+                        <div id="from" class="title">From:</div>
+                    </div>
+                    <div class="half"><input type="text" class="from" name="from" autocomplete="off" placeholder="enter city"></div>
                 </div>
+                <div class="row">
+                    <div class="half">
+                        <div id="to" class="title">To:</div>
+                    </div>
+                    <div class="half"><input type="text" class="to" name="to" autocomplete="off" placeholder="enter city"></div>
+                </div>
+                <div class="row">
+                    <div class="half">
+                        <div id="date" class="title">Date:</div>
+                    </div>
 
-                <input type="text" class="from" name="from" autocomplete="off" placeholder="enter city">
-                <div class="title">
-                    <div id="to">To:</div>
+                    <div class="half"><input id="datepicker" name="data" placeholder="choose date"/></div>
                 </div>
-                <input type="text" class="to" name="to" autocomplete="off" placeholder="enter city">
-                <div class="title">
-                    <div id="date">Date:</div>
-                </div>
-                <input id="datepicker" name="data" placeholder="choose date"/>
                 <input type="button" id="submit" value="Search"/>
             </form>
             <div class="results"></div>
