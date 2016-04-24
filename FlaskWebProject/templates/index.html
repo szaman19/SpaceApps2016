@@ -49,9 +49,9 @@
                 fromLon = JSON.stringify(value["longitude"]);
                 city = JSON.stringify(value["name"]);
                 // console.log(city); console.log("latitude: " + fromLat); console.log("longitude: " + fromLon);
-                fromCity.push(city);
-                fromCity.push(fromLat);
-                fromCity.push(fromLon);
+                fromCity = city;
+                fLat = fromLat
+                fLon = fromLon;
 
             });
             TeleportAutocomplete.init('.to').on('change', function(value) {
@@ -60,21 +60,29 @@
                 toLon = JSON.stringify(value["longitude"]);
                 city = JSON.stringify(value["name"]);
                 // console.log(city); console.log("latitude: " + toLat); console.log("longitude: " + toLon);
-                toCity.push(city);
-                toCity.push(toLat);
-                toCity.push(toLon);
+                toCity = city;
+                tLat = toLat;
+                tLon = toLon;
 
             });
-            var fromCity = [];
-            var toCity = [];
-            var dated = [];
+            var fromCity;
+            var fLat;
+            var fLon;
+            var toCity;
+            var tLat;
+            var tLon;
+            var dated;
             // var dict = {}; dict['from city'] = fromCity; dict['to city'] = toCity; dict['date'] = dated;
             //
             // console.log(dict); //////////
             $("#submit").click(function() {
                 $.get('/extremeHazard', {
                     from: fromCity,
+                    lon1: fLon,
+                    lat1: fLat,
                     to: toCity,
+                    lon2: tLon,
+                    lat2: tLat,
                     date: dated
                 }).done(function(data) {
                     // alert(data.Hello);
@@ -141,7 +149,7 @@
             </div>
         </div>
     </div>
-
+</div>
 </body>
 
 </html>
