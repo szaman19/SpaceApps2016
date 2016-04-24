@@ -6,9 +6,12 @@ body {
   background-color: #1a425e; }
 
 #container {
-  background-color: #007e7a;
-  width: 32%;
-  margin: auto; }
+  background-color: #007e7a; }
+  @media screen and (min-width: 768px) {
+    #container {
+      width: 30%;
+      margin: 1em auto 1em auto;
+      box-shadow: 0 0 3em #0d2332; } }
 
 #logo {
   width: 100%;
@@ -112,6 +115,11 @@ form #datepicker {
 #container-two {
   display: none;
   background-color: #5fc4bc; }
+  @media screen and (min-width: 768px) {
+    #container-two {
+      width: 30%;
+      margin: 1em auto 1em auto;
+      box-shadow: 0 0 3em #0d2332; } }
 
 #searchHeader {
   padding: 2em;

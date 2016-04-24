@@ -1,5 +1,6 @@
 $sky: #5fc4bc;
 $search: #007e7a;
+$contain: 30%;
 * {
     box-sizing: border-box;
 }
@@ -10,8 +11,12 @@ body {
 #container {
     // display: none;
     background-color: $search;
-    width: 32%;
-    margin:auto;
+
+     @media screen and (min-width:768px) {
+       width: $contain;
+       margin:1em auto 1em auto;
+        box-shadow: 0 0 3em #0d2332;
+     }
 }
 #logo {
     width: 100%;
@@ -134,6 +139,11 @@ form {
 #container-two {
     display: none;
     background-color: $sky;
+    @media screen and (min-width:768px) {
+      width: $contain;
+      margin:1em auto 1em auto;
+       box-shadow: 0 0 3em #0d2332;
+    }
 }
 #searchHeader {
     padding: 2em;
