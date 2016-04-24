@@ -32,7 +32,7 @@
             var getDate = $('#datepicker').on('change', function() {
                 var searchDate = $('#datepicker').val();
                 // console.log("Date: " + searchDate);
-                dated['date'] = searchDate;
+                dated.append(searchDate);
             });
 
             var $results = document.querySelector('.results');
@@ -49,9 +49,9 @@
                 fromLon = JSON.stringify(value["longitude"]);
                 city = JSON.stringify(value["name"]);
                 // console.log(city); console.log("latitude: " + fromLat); console.log("longitude: " + fromLon);
-                fromCity['to'] = city;
-                fromCity['to latitude'] = fromLat;
-                fromCity['to longitude'] = fromLon;
+                fromCity.append(city);
+                fromCity.append(fromLat);
+                fromCity.append(fromLon);
 
             });
             TeleportAutocomplete.init('.to').on('change', function(value) {
@@ -68,10 +68,10 @@
             var fromCity = [];
             var toCity = [];
             var dated = [];
-            var dict = {};
-            dict['from city'] = fromCity;
-            dict['to city'] = toCity;
-            dict['date'] = dated;
+            // var dict = {};
+            // dict['from city'] = fromCity;
+            // dict['to city'] = toCity;
+            // dict['date'] = dated;
 
             console.log(dict);
             ////////////
