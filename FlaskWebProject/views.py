@@ -6,6 +6,8 @@ from datetime import datetime
 from flask import render_template, jsonify, request
 from FlaskWebProject import app
 
+# import checkWeather
+
 @app.route('/')
 @app.route('/home')
 def home():
@@ -28,3 +30,15 @@ def awesome():
 @app.route('/trial', methods=['GET'])
 def apiTrial():
     return jsonify({"Hello":"World"});
+
+
+@app.route('/extremeHazard', methods = ['GET'])
+def checkHazards():
+    print 'Hello'
+    print 'Hello'
+    print request.args
+    return "info received"
+
+# @app.route('/weather', methods=['GET'])
+# def checkWeather():
+    # currentWeather = checkWeather.currentConditions(long, lat, date)
