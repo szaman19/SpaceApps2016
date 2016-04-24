@@ -34,8 +34,31 @@ def apiTrial():
 
 @app.route('/extremeHazard', methods = ['GET'])
 def checkHazards():
-    print 'Hello'
-    print request.args.items()
+    info =  request.args.items()
+    # print type(request.args.items())
+    to = info[0]
+    lon1 = info[1]
+    lat1 = info[2]
+    lat2 = info[3]
+    date = info[4]
+    fromC = info[5]
+    lon2 = info[6]
+
+    print to
+    print lon1
+    print lat1
+
+    print fromC
+    print lon2
+    print lat2
+    print date
+    # print request.args.list('from')
+    # print request.args.list('lon1')
+    # print request.args.list('lat1')
+    # print request.args.list('to')
+    # print request.args.list('lon2')
+    # print request.args.list('lat2')
+    # print request.args.list('date')
     return "info received"
 
 # @app.route('/weather', methods=['GET'])
