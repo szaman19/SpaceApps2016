@@ -36,7 +36,7 @@ def apiTrial():
 def checkHazards():
     print 'Hello'
     print 'Hello'
-    print request.args
+    print request.args.getlist('data')
     return "info received"
 
 # @app.route('/weather', methods=['GET'])
