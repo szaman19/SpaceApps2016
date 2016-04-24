@@ -37,10 +37,11 @@ body {
     width: 40%;
     display: inline-table;
     vertical-align: top;
+    color:#fff;
 }
 .row {
     padding: 2em 2em 0;
-    margin-bottom: -2em;
+    margin-bottom: -1em;
 }
 .title {
     margin-bottom: 0.5em;
@@ -178,8 +179,22 @@ form {
         }
     }
     .weekWeather {
-        background-color: $search;
+        background-color: #fff;
         margin-top: -1em;
-        padding: 2em;
+        padding: 2em 2em 0 2em;
+    }
+    .flights {
+      background-color:#ffdc22;
+      padding: 2em;
+      text-align:center;
+      .flight {
+        font-size:1.7em;
+      }
+      strong {
+        font-size: 1.2em;
+        display:block;
+        padding: 0.3em;
+        background-color:#fff;
+      }
     }
 }

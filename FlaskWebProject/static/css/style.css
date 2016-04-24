@@ -30,11 +30,12 @@ body {
 .half {
   width: 40%;
   display: inline-table;
-  vertical-align: top; }
+  vertical-align: top;
+  color: #fff; }
 
 .row {
   padding: 2em 2em 0;
-  margin-bottom: -2em; }
+  margin-bottom: -1em; }
 
 .title {
   margin-bottom: 0.5em;
@@ -148,8 +149,19 @@ form #datepicker {
     font-weight: 100;
     text-align: center; }
 .wrapper .weekWeather {
-  background-color: #007e7a;
+  background-color: #fff;
   margin-top: -1em;
-  padding: 2em; }
+  padding: 2em 2em 0 2em; }
+.wrapper .flights {
+  background-color: #ffdc22;
+  padding: 2em;
+  text-align: center; }
+  .wrapper .flights .flight {
+    font-size: 1.7em; }
+  .wrapper .flights strong {
+    font-size: 1.2em;
+    display: block;
+    padding: 0.3em;
+    background-color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
