@@ -2,10 +2,13 @@
   box-sizing: border-box; }
 
 body {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  background-color: #1a425e; }
 
 #container {
-  background-color: #007e7a; }
+  background-color: #007e7a;
+  width: 32%;
+  margin: auto; }
 
 #logo {
   width: 100%;
