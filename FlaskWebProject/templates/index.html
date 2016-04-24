@@ -29,10 +29,10 @@
             });
 
             var searchDate; // DATE
-            var getDate = $('#datepicker').on('change',function(){
-              var searchDate = $('#datepicker').val();
-              console.log("Date: " + searchDate);
-              dated['date'] = searchDate;
+            var getDate = $('#datepicker').on('change', function() {
+                var searchDate = $('#datepicker').val();
+                // console.log("Date: " + searchDate);
+                dated['date'] = searchDate;
             });
 
             var $results = document.querySelector('.results');
@@ -48,9 +48,7 @@
                 fromLat = JSON.stringify(value["latitude"]);
                 fromLon = JSON.stringify(value["longitude"]);
                 city = JSON.stringify(value["name"]);
-                console.log(city);
-                console.log("latitude: " + fromLat);
-                console.log("longitude: " + fromLon);
+                // console.log(city); console.log("latitude: " + fromLat); console.log("longitude: " + fromLon);
                 fromCity['to'] = city;
                 fromCity['to latitude'] = fromLat;
                 fromCity['to longitude'] = fromLon;
@@ -61,9 +59,7 @@
                 toLat = JSON.stringify(value["latitude"]);
                 toLon = JSON.stringify(value["longitude"]);
                 city = JSON.stringify(value["name"]);
-                console.log(city);
-                console.log("latitude: " + toLat);
-                console.log("longitude: " + toLon);
+                // console.log(city); console.log("latitude: " + toLat); console.log("longitude: " + toLon);
                 toCity['from'] = city;
                 toCity['from latitude'] = toLat;
                 toCity['from longitude'] = toLon;
@@ -72,14 +68,20 @@
             var fromCity = [];
             var toCity = [];
             var dated = [];
-            var dict = [];
+            var dict = {};
             dict['from city'] = fromCity;
             dict['to city'] = toCity;
             dict['date'] = dated;
 
             console.log(dict);
-        
-
+            ////////////
+            $("#submit").click(function() {
+                $.get('/extremeHazard',{data: dict}).done(function(data) {
+                    // alert(data.Hello);
+                    console.log(data);
+                });
+            });
+            /////////////
 
         });
     </script>
