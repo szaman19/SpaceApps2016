@@ -12,27 +12,27 @@ body {
 }
 #logo {
     width: 100%;
-    margin:auto;
+    margin: auto;
     background-color: $sky;
-    text-align:center;
+    text-align: center;
     object {
-      width:90%;
-      margin:0.3em auto 0.3em auto;
+        width: 90%;
+        margin: 0.3em auto;
     }
 }
 #search {
-  position:relative;
-  bottom:0;
+    position: relative;
+    bottom: 0;
     background-color: $search;
 }
 .half {
-  width: 40%;
-  display:inline-table;
-  vertical-align: top;
+    width: 40%;
+    display: inline-table;
+    vertical-align: top;
 }
 .row {
-  padding:2em 2em 0 2em;
-  margin-bottom: -2em;
+    padding: 2em 2em 0;
+    margin-bottom: -2em;
 }
 .title {
     margin-bottom: 0.5em;
@@ -62,7 +62,6 @@ form {
         font-weight: bold;
         text-decoration: none;
         border: none;
-
         &::-webkit-input-placeholder {
             color: #a6a6a6;
         }
@@ -82,9 +81,9 @@ form {
         background-color: #ffdc22;
         width: 100%;
         padding: 1em;
-        margin-top:4em;
+        margin-top: 4em;
         font-size: 1.2em;
-        text-transform:uppercase;
+        text-transform: uppercase;
         color: #000;
         font-weight: bold;
         text-decoration: none;
@@ -120,51 +119,54 @@ form {
 }
 //////////////////////////////////
 #back {
-  display:relative;
-  &:hover {
-    color: #fff;
-  }
+    display: relative;
+    span {
+        cursor: pointer;
+        &:active,
+        &:hover {
+            color: #777;
+        }
+    }
 }
 #container-two {
-    display:none;
+    display: none;
     background-color: $sky;
 }
 #searchHeader {
-  padding:2em;
-  background-color:#fff;
-  #dateInfo {
-      display: table;
-      margin:auto;
-      font-size:1.2em;
-      color: #206aa7;
-  }
-  #location {
-    color: #000;
-      display: table;
-      margin:auto;
-      font-size: 1.8em;
-  }
-}
-
-.wrapper {
-  img {
     padding: 2em;
-    max-width: 100%;
-    margin: auto;
-  }
-  #alert {
-    background-color:#f24122;
-    margin-top:-2em;
-    p{
-      padding:1em;
-      color:#fff;
-      font-weight:100;
-      text-align:center;
+    background-color: #fff;
+    #dateInfo {
+        display: table;
+        margin: auto;
+        font-size: 1.2em;
+        color: #206aa7;
     }
-  }
-  .weekWeather {
-    background-color: $search;
-    margin-top:-1em;
-    padding:2em;
-  }
+    #location {
+        color: #000;
+        display: table;
+        margin: auto;
+        font-size: 1.8em;
+    }
+}
+.wrapper {
+    img {
+        padding: 2em;
+        max-width: 100%;
+        margin: auto;
+    }
+    #alert {
+        background-color: #f24122;
+        margin-top: -2em;
+        p {
+            padding: 1em;
+            color: #fff;
+            font-weight: 100;
+            text-align: center;
+        }
+    }
+    .weekWeather {
+        background-color: $search;
+        margin-top: -1em;
+        padding: 2em;
+    }
 }

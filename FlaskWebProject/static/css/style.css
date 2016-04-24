@@ -14,7 +14,7 @@ body {
   text-align: center; }
   #logo object {
     width: 90%;
-    margin: 0.3em auto 0.3em auto; }
+    margin: 0.3em auto; }
 
 #search {
   position: relative;
@@ -27,7 +27,7 @@ body {
   vertical-align: top; }
 
 .row {
-  padding: 2em 2em 0 2em;
+  padding: 2em 2em 0;
   margin-bottom: -2em; }
 
 .title {
@@ -101,6 +101,10 @@ form #datepicker {
 
 #back {
   display: relative; }
+  #back span {
+    cursor: pointer; }
+    #back span:active, #back span:hover {
+      color: #777; }
 
 #container-two {
   display: none;
