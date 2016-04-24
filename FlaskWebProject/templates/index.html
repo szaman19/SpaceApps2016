@@ -76,7 +76,11 @@
             console.log(dict);
             ////////////
             $("#submit").click(function() {
-                $.get('/extremeHazard',{data: dict}).done(function(data) {
+                $.get('/extremeHazard',{
+                  from: fromCity,
+                  to: toCity,
+                  date: dated
+                }).done(function(data) {
                     // alert(data.Hello);
                     console.log(data);
                 });
