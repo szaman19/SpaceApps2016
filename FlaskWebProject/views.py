@@ -21,7 +21,7 @@ def home():
 
 @app.route('/apiTest')
 def awesome():
-    """Renders awesome"""
+    """Renders apiTest"""
     return render_template(
         'apiTest.html',
         title='AWESOME',
@@ -35,8 +35,7 @@ def apiTrial():
 @app.route('/extremeHazard', methods = ['GET'])
 def checkHazards():
     print 'Hello'
-    print 'Hello'
-    print request.args.getlist('data')
+    print request.args.items()
     return "info received"
 
 # @app.route('/weather', methods=['GET'])
