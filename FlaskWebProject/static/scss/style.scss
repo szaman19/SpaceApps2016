@@ -121,6 +121,9 @@ form {
 //////////////////////////////////
 #back {
   display:relative;
+  &:hover {
+    color: #fff;
+  }
 }
 #container-two {
     display:none;
