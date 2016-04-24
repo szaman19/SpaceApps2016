@@ -32,7 +32,7 @@
             var getDate = $('#datepicker').on('change', function() {
                 var searchDate = $('#datepicker').val();
                 // console.log("Date: " + searchDate);
-                dated.push(searchDate);
+                dated = searchDate;
             });
 
             var $results = document.querySelector('.results');
