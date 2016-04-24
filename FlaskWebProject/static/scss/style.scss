@@ -119,6 +119,9 @@ form {
     }
 }
 //////////////////////////////////
+#back {
+  display:relative;
+}
 #container-two {
     display:none;
     background-color: $sky;

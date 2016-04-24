@@ -99,6 +99,9 @@ form #datepicker {
   form #datepicker::-ms-input-placeholder {
     color: #a6a6a6; }
 
+#back {
+  display: relative; }
+
 #container-two {
   display: none;
   background-color: #5fc4bc; }

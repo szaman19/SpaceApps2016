@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     <script src="/static/autocomplete/teleport-autocomplete.js"></script>
     <script>
@@ -60,9 +60,9 @@
                 toLon = JSON.stringify(value["longitude"]);
                 city = JSON.stringify(value["name"]);
                 // console.log(city); console.log("latitude: " + toLat); console.log("longitude: " + toLon);
-                toCity['from'] = city;
-                toCity['from latitude'] = toLat;
-                toCity['from longitude'] = toLon;
+                toCity.append(city);
+                toCity.append(toLat);
+                toCity.append(toLon);
 
             });
             var fromCity = [];
@@ -76,10 +76,10 @@
             console.log(dict);
             ////////////
             $("#submit").click(function() {
-                $.get('/extremeHazard',{
-                  from: fromCity,
-                  to: toCity,
-                  date: dated
+                $.get('/extremeHazard', {
+                    from: fromCity,
+                    to: toCity,
+                    date: dated
                 }).done(function(data) {
                     // alert(data.Hello);
                     console.log(data);
@@ -128,7 +128,7 @@
     <div id="container-two">
         <div id="searchHeader">
             <div id="back">
-                <button><-</button>
+                <span class="fa fa-arrow-left fa-2x"></span>
             </div>
             <div id="dateInfo">Jan. 3rd, 2016</div>
             <div id="location">New York, NY</div>
