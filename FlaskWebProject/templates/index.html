@@ -13,6 +13,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/static/autocomplete/teleport-autocomplete.min.css">
     <script src="/static/autocomplete/teleport-autocomplete.js"></script>
     <script>
         $(document).ready(function() {
@@ -134,18 +137,25 @@
             <div id="back">
                 <span class="fa fa-arrow-left fa-2x"></span>
             </div>
-            <div id="dateInfo">Jan. 3rd, 2016</div>
-            <div id="location">New York, NY</div>
+            <div id="dateInfo">Apr. 24 2016</div>
+            <div id="location">Monticello, NY</div>
         </div>
         <div class="wrapper">
             <img src="https://www.almanac.com/sites/default/files/d6/us_weathermaps13-summer-cmyk.jpg" alt="add interactive map"/>
             <div id="alert">
                 <p>
-                    Wildfires in Manhattan
+                    Wildfires in Ulster County
                 </p>
             </div>
             <div class="weekWeather">
-                <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=42.3583&lon=-71.0603&name=Downtown Boston"></iframe>
+                <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=38.0086&lon=-78.4532&name=Monticello"></iframe>
+            </div>
+            <div class="flights">
+              <span class="flight">Flight Info</span>
+                <p>
+                    <strong>LGA - SWF</strong><br>
+                      No delays
+                </p>
             </div>
         </div>
     </div>
