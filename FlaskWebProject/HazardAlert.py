@@ -14,9 +14,6 @@ def findHazard(lon, lat):
         # print(each)
         for coords in each['geometries']:
             if (coords['type'] == 'Point'):
-                #print(coords)
-                # print coords['coordinates'][0]
-                # print coords['coordinates'][1]
                 distances = haversine(coords['coordinates'][0],coords['coordinates'][1]\
                                     ,lon,lat )
 
